@@ -2,10 +2,10 @@ mkdir -p ~/.streamlit/
 
 eecho "\
 [general]\n\
-email = \"your-email@domain.com\"\n\
+
 " > ~/.streamlit/credentials.toml
 
-eecho "\
+echo "\
 [server]\n\
 headless = true\n\
 enableCORS=false\n\
