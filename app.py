@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 st.set_page_config(layout="wide")
 st.title("Mein erstes Dashboard")
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
 
 import pydeck as pdk
 
