@@ -4,25 +4,14 @@ import pandas as pd
 st.title("Ja es haaaaat endlich geklappt!!!!")
 col1, col2, col3 = st.beta_columns(3)
 
-col1.subheader('Magic commands')
-col1.code('''# Magic commands implicitly `st.write()`
-\'\'\' _This_ is some __Markdown__ \'\'\'
-a=3
-'dataframe:', data
-    ''')
+with col1:
+    st.image("https://yt3.ggpht.com/ytc/AAUvwnjv4fz3f0cP5DApmFWWyh3l8B6DMk9kU7NaIvQb8A=s900-c-k-c0x00ffffff-no-rj")
+
+with col2:
+    st.image("https://yt3.ggpht.com/ytc/AAUvwnjv4fz3f0cP5DApmFWWyh3l8B6DMk9kU7NaIvQb8A=s900-c-k-c0x00ffffff-no-rj")
+
+with col3:
+    st.image("https://yt3.ggpht.com/ytc/AAUvwnjv4fz3f0cP5DApmFWWyh3l8B6DMk9kU7NaIvQb8A=s900-c-k-c0x00ffffff-no-rj")
 
 
-col2.subheader('Magic commands')
-col2.code('''# Magic commands implicitly `st.write()`
-\'\'\' _This_ is some __Markdown__ \'\'\'
-a=3
-'dataframe:', data
-    ''')
-
-
-col2.subheader('Magic commands')
-col1.code('''# Magic commands implicitly `st.write()`
-\'\'\' _This_ is some __Markdown__ \'\'\'
-a=3
-'dataframe:', data
-    ''')
+    
