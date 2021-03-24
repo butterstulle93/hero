@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 
+st.title("Ja es haaaaat endlich geklappt!!!!)
 col1, col2, col3 = st.beta_columns(3)
 
 col1.subheader('Magic commands')
