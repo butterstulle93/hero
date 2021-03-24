@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 
+
 st.title("Ja es haaaaat endlich geklappt!!!!")
 col1, col2, col3 = st.beta_columns(3)
 
@@ -14,4 +15,5 @@ with col3:
     st.image("https://yt3.ggpht.com/ytc/AAUvwnjv4fz3f0cP5DApmFWWyh3l8B6DMk9kU7NaIvQb8A=s900-c-k-c0x00ffffff-no-rj")
 
 
-    
+
+st.image("https://hiphop.de/sites/default/files/styles/hiphopde_800x450/public/news_articles/kiz_pr_2015_1600.jpg?itok=j7kBUwML")
