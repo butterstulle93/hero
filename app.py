@@ -33,9 +33,24 @@ view_state = pdk.ViewState(
 
 # Render
 r = pdk.Deck(layers=[layer], initial_view_state=view_state)
+
+
+
+
 r.to_html("hexagon_layer.html")
 
-st.pydeck_chart(r)
+col1, col2, col3 = st.beta_columns(3)
+
+with col1: 
+    st.pydeck_chart(r)
+    
+
+with col2: 
+    st.pydeck_chart(r)
+
+with col3: 
+    st.pydeck_chart(r)
+
 
 
   
