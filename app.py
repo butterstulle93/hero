@@ -1,27 +1,23 @@
 import time
-import altair as alt
 import numpy as np
-import pandas as pd
 import streamlit as st
 
-st.write("Björn war hier")
+progress_bar = st.sidebar.progress(0)
+status_text = st.sidebar.empty()
+last_rows = np.random.randn(1, 1)
+chart = st.line_chart(last_rows)
 
-# Generate some random data
-df = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+for i in range(1, 10100000000000):
+    new_rows = last_rows[-1, :] + np.random.randn(5, 1).cumsum(axis=0)
+    status_text.text("%i%% Complete" % i)
+    chart.add_rows(new_rows)
+    progress_bar.progress(i)
+    last_rows = new_rows
+    time.sleep(0.05)
 
-# Build a scatter chart using altair. I modified the example at
-# https://altair-viz.github.io/gallery/scatter_tooltips.html
-scatter_chart = st.altair_chart(
-    alt.Chart(df)
-        .mark_circle(size=60)
-        .encode(x='a', y='b', color='c')
-        .interactive()
-)
+progress_bar.empty()
 
-# Append more random data to the chart using add_rows
-for ii in range(0, 50000000):
-    df = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-    scatter_chart.add_rows(df)
-    # Sleep for a moment just for demonstration purposes, so that the new data
-    # animates in.
-    time.sleep(0.0001)
+# Streamlit widgets automatically run the script from top to bottom. Since
+# this button is not connected to any other logic, it just causes a plain
+# rerun.
+st.button("Re-run")
