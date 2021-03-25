@@ -14,7 +14,7 @@ for i in range(1, 101000000000000000000000000):
     progress_bar.progress(i)
     last_rows = new_rows
     time.sleep(1)
-    st.write("Sex")
+    st.write(i +"Versuch")
 
 progress_bar.empty()
 
