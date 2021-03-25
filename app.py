@@ -13,7 +13,8 @@ for i in range(1, 101000000000000000000000000):
     chart.add_rows(new_rows)
     progress_bar.progress(i)
     last_rows = new_rows
-    time.sleep(0.005)
+    time.sleep(1)
+    st.write("Sex")
 
 progress_bar.empty()
 
