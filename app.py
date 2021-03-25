@@ -19,9 +19,9 @@ scatter_chart = st.altair_chart(
 )
 
 # Append more random data to the chart using add_rows
-for ii in range(0, 5000):
+for ii in range(0, 50000000):
     df = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
     scatter_chart.add_rows(df)
     # Sleep for a moment just for demonstration purposes, so that the new data
     # animates in.
-    time.sleep(0.05)
+    time.sleep(0.0001)
